@@ -1,0 +1,1623 @@
+@import "tailwindcss";
+
+/* Theme variants: `light:` applies in the default light theme, `dark-theme:`
+   only when the visitor chose dark (or inside a forced-dark subtree). */
+@custom-variant light (&:where(:root:not([data-theme="dark"]), :root:not([data-theme="dark"]) *));
+@custom-variant dark-theme (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ------------------------------------------------------------------
+   Sridevi Tours & Travels — Luxury Dark design tokens (Phase 03).
+   Approved palette; tonal extensions exist only for accessible text
+   and depth. Mirror of the JS-side values: src/design/tokens.ts.
+   ------------------------------------------------------------------ */
+@theme {
+  /* Approved palette */
+  --color-charcoal: #0b0f14; /* Deep Charcoal — main background */
+  --color-midnight: #111827; /* Midnight Slate — secondary background */
+  --color-navy: #1e293b; /* Rich Navy — atmospheric surface, sparingly */
+  --color-bronze: #8b6b46; /* Royal Bronze — fine accents, borders */
+  --color-gold: #d4a762; /* Copper Gold — CTA highlight, accent text */
+  --color-grey: #374151; /* Warm Grey — panels, supporting surfaces */
+  --color-white: #ffffff; /* Pure White — primary text */
+
+  /* Tonal extensions (accessibility & depth only) */
+  --color-gold-soft: #e2c08a; /* CTA hover */
+  --color-fog: #d5d9e0; /* body text on dark (≥12:1) */
+  --color-mist: #a9b0bb; /* secondary text on dark (≥7:1 on midnight) */
+  --color-line: rgb(255 255 255 / 0.1); /* hairline borders */
+  --color-danger: #f0a090; /* errors on dark (≥7:1) */
+  --color-flame: #d4a762; /* decorative accent: gold in dark, bright orange in light */
+  --color-success: #9fcf9a; /* confirmations on dark (≥9:1) */
+
+  /* Typography */
+  --font-display: var(--font-newsreader), var(--font-noto-serif-telugu), "Georgia", serif;
+  --font-sans:
+    var(--font-hanken), var(--font-noto-sans-telugu), ui-sans-serif, system-ui, sans-serif;
+  --text-display: clamp(2.75rem, 1.6rem + 5vw, 6rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.02em;
+  --text-headline: clamp(2rem, 1.4rem + 2.6vw, 3.5rem);
+  --text-headline--line-height: 1.05;
+  --text-title: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem);
+  --text-title--line-height: 1.2;
+  --text-card: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-card--line-height: 1.2;
+  --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --text-lead--line-height: 1.65;
+  --text-body: 1rem;
+  --text-body--line-height: 1.7;
+  --text-label: 0.875rem;
+  --text-label--line-height: 1.4;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--letter-spacing: 0.22em;
+
+  /* Radii — restrained, architectural */
+  --radius-hairline: 2px;
+  --radius-plaque: 6px;
+  --radius-card: 14px;
+  --radius-panel: 20px;
+
+  /* Shadows — deep and soft, never glowing */
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -10px rgb(0 0 0 / 0.55);
+  --shadow-lift: 0 2px 6px rgb(0 0 0 / 0.35), 0 28px 56px -24px rgb(0 0 0 / 0.75);
+  --shadow-panel: 0 40px 80px -30px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(139 107 70 / 0.35);
+
+  /* Layout widths */
+  --container-content: 78rem;
+  --container-prose: 40rem;
+  --container-narrow: 30rem;
+
+  /* Breakpoints (Tailwind defaults kept; xs added for large phones) */
+  --breakpoint-xs: 30rem;
+
+  /* Motion */
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-gentle: cubic-bezier(0.45, 0, 0.2, 1);
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+  --duration-slow: 640ms;
+  --animate-sweep: sweep 1.4s var(--ease-gentle) infinite;
+
+  @keyframes sweep {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(300%);
+    }
+  }
+}
+
+:root {
+  --grain-opacity: 0.07;
+  --focus-ring: var(--color-gold);
+  /* Form control boundary, ≥3:1 against its surface (WCAG 1.4.11). */
+  --input-border: rgb(169 176 187 / 0.55);
+  /* Fine monochrome film grain, generated, ~1 KB */
+  --grain-texture: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  /* Low-frequency mottling that reads as dark natural stone */
+  --stone-texture: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='s'><feTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.62 0 0 0 0 0.66 0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23s)'/></svg>");
+  color-scheme: dark;
+}
+
+@layer base {
+  :root {
+    --header-height: 4.5rem;
+  }
+  @media (min-width: 64rem) {
+    :root {
+      --header-height: 5.75rem;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+    background-color: var(--color-charcoal);
+  }
+
+  body {
+    background-color: var(--color-charcoal);
+    color: var(--color-fog);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Telugu needs more vertical room for vowel signs and conjuncts. */
+  :lang(te) body {
+    line-height: 1.75;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-charcoal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+    border-radius: var(--radius-hairline);
+  }
+}
+
+@layer components {
+  /* Film grain overlay. Add `grain` to any container. */
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: var(--grain-texture);
+    opacity: var(--grain-opacity);
+    mix-blend-mode: overlay;
+  }
+
+  /* Section surfaces */
+  .surface-charcoal {
+    background-color: var(--color-charcoal);
+  }
+  .surface-midnight {
+    background:
+      radial-gradient(90% 60% at 85% 0%, rgb(30 41 59 / 0.55), transparent 65%),
+      var(--color-midnight);
+  }
+  /* Atmospheric depth: cloud-like navy haze with a low bronze glow. */
+  .surface-atmos {
+    background:
+      radial-gradient(120% 70% at 78% 12%, rgb(30 41 59 / 0.9), transparent 62%),
+      radial-gradient(90% 55% at 8% 100%, rgb(139 107 70 / 0.22), transparent 70%),
+      linear-gradient(180deg, #0b0f14 0%, #111827 60%, #0b0f14 100%);
+  }
+  /* Dark natural stone: mottled texture under a deep charcoal wash. */
+  .surface-stone {
+    background:
+      linear-gradient(rgb(11 15 20 / 0.9), rgb(11 15 20 / 0.9)), var(--stone-texture),
+      var(--color-midnight);
+    background-size:
+      auto,
+      600px 600px,
+      auto;
+  }
+
+  /* Gentle vignette for cinematic bands (decorative overlay). */
+  .vignette::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(130% 100% at 50% 40%, transparent 55%, rgb(0 0 0 / 0.55));
+  }
+
+  /* Premium glass: dark translucent, blurred, bronze hairline. */
+  .glass {
+    background: linear-gradient(160deg, rgb(30 41 59 / 0.72), rgb(17 24 39 / 0.78));
+    -webkit-backdrop-filter: blur(18px) saturate(115%);
+    backdrop-filter: blur(18px) saturate(115%);
+    border: 1px solid rgb(139 107 70 / 0.45);
+    box-shadow: var(--shadow-panel);
+  }
+  /* Dark panel used for cards and forms. */
+  .panel {
+    background: linear-gradient(170deg, rgb(55 65 81 / 0.32), rgb(17 24 39 / 0.7));
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Soft metallic bronze reflection along the top edge of a surface. */
+  .sheen {
+    position: relative;
+  }
+  .sheen::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 1px;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(212 167 98 / 0.55) 30%,
+      rgb(255 255 255 / 0.35) 50%,
+      rgb(212 167 98 / 0.55) 70%,
+      transparent
+    );
+  }
+
+  /* Bronze hairline rule used as an editorial divider */
+  .rule-bronze {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-bronze), transparent);
+  }
+
+  /* Art-directed plates: backdrops for photography slots until licensed
+     imagery is supplied (see docs/ASSETS.md). */
+  .plate-dusk {
+    background:
+      radial-gradient(70% 60% at 76% 22%, rgb(212 167 98 / 0.2), transparent 65%),
+      radial-gradient(60% 55% at 8% 96%, rgb(139 107 70 / 0.35), transparent 70%),
+      linear-gradient(170deg, #0b0f14 0%, #1e293b 55%, #111827 100%);
+  }
+  .plate-dawn {
+    background:
+      radial-gradient(65% 55% at 18% 18%, rgb(255 255 255 / 0.1), transparent 65%),
+      radial-gradient(55% 50% at 88% 92%, rgb(139 107 70 / 0.32), transparent 70%),
+      linear-gradient(190deg, #111827 0%, #1e293b 60%, #0b0f14 100%);
+  }
+  .plate-gold {
+    background:
+      radial-gradient(60% 55% at 62% 34%, rgb(212 167 98 / 0.3), transparent 66%),
+      radial-gradient(50% 45% at 20% 90%, rgb(139 107 70 / 0.25), transparent 70%),
+      linear-gradient(175deg, #111827 0%, #0b0f14 100%);
+  }
+  .plate-stone {
+    background:
+      radial-gradient(70% 60% at 80% 15%, rgb(55 65 81 / 0.6), transparent 65%),
+      radial-gradient(60% 50% at 10% 95%, rgb(139 107 70 / 0.22), transparent 70%),
+      linear-gradient(160deg, #1e293b 0%, #111827 60%, #0b0f14 100%);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Hero / card scene colours (src/components/home/HeroScenes.tsx).
+   Dark values are the original night scene; light overrides below.
+   ------------------------------------------------------------------ */
+:root {
+  --scene-sky-0: #0b0f14;
+  --scene-sky-1: #111827;
+  --scene-sky-2: #1e293b;
+  --scene-glow: #d4a762;
+  --scene-cloud: #374151;
+  --scene-cloud-deep: #1e293b;
+  --scene-hill-far: #151c27;
+  --scene-hill-near: #111827;
+  --scene-ground: #0b0f14;
+  --scene-embankment: #0e141c;
+  --scene-rail: #5b6472;
+  --scene-edge: #8b6b46;
+  --scene-lane: #d4a762;
+}
+
+/* ------------------------------------------------------------------
+   Light theme — the DEFAULT (Phase 03.2): applies unless the visitor has
+   explicitly chosen dark (html[data-theme="dark"]). Palette from the
+   owner-approved reference: white / cool white / atmospheric blue, deep
+   navy type and controlled orange.
+   Remaps the palette ROLES so every utility follows; the approved dark
+   values in @theme above are never changed.
+   charcoal → page bg · midnight → soft bg · navy → atmospheric blue
+   grey → borders · white → primary navy text · fog/mist → body/secondary
+   gold → accent orange for text & CTAs (#BF4E05, 4.9:1 on white)
+   flame → bright reference orange #F36B08 (decorative only, 3:1)
+   ------------------------------------------------------------------ */
+:root:not([data-theme="dark"]) {
+  color-scheme: light;
+  --color-charcoal: #ffffff;
+  --color-midnight: #f4f7fb;
+  --color-navy: #e8eef5;
+  --color-grey: #d6dfe9;
+  --color-white: #14263d;
+  --color-fog: #24364f;
+  --color-mist: #42556b;
+  --color-gold: #bf4e05;
+  --color-gold-soft: #a14104;
+  --color-flame: #f36b08;
+  --color-bronze: #8494a8;
+  --color-line: rgb(16 33 59 / 0.1);
+  --color-danger: #b42318;
+  --color-success: #1d6b3a;
+  --input-border: #8494a8;
+  --shadow-soft: 0 1px 2px rgb(16 33 59 / 0.05), 0 10px 28px -14px rgb(16 33 59 / 0.18);
+  --shadow-lift: 0 2px 6px rgb(16 33 59 / 0.06), 0 28px 56px -26px rgb(16 33 59 / 0.3);
+  --shadow-panel: 0 36px 72px -30px rgb(16 33 59 / 0.36), 0 0 0 1px rgb(215 224 234);
+  --grain-opacity: 0.035;
+  --focus-ring: #bf4e05;
+
+  /* Shared light atmosphere: white edges let adjacent sections flow together. */
+  --page-background: #ffffff;
+  --surface-soft: #f4f7fb;
+  --surface-blue: #e8eef5;
+  --brand-blue: #1756a9;
+  --brand-blue-deep: #103b75;
+  --surface-border: #d6dfe9;
+  --atmosphere-waves:
+    radial-gradient(100% 28% at 80% 48%, rgb(255 255 255 / 0.45) 35%, transparent 75%),
+    radial-gradient(110% 36% at 15% 55%, rgb(214 234 253 / 0.16) 35%, transparent 75%);
+  --section-background:
+    var(--atmosphere-waves),
+    radial-gradient(ellipse at 85% 35%, #d9eafd, transparent 65%),
+    linear-gradient(180deg, #ffffff, #edf5ff 40%, #f4f7fb 75%, #ffffff);
+  --section-atmosphere:
+    var(--atmosphere-waves),
+    radial-gradient(ellipse at 85% 25%, #cfe5fc, transparent 65%),
+    linear-gradient(180deg, #ffffff, #e8f2ff 45%, #f4f7fb 80%, #ffffff);
+  --card-background: linear-gradient(155deg, #ffffff, #f4f9ff);
+  --elevated-background: linear-gradient(155deg, #ffffff, #edf5ff);
+  --control-background: #ffffff;
+  --control-hover: #f4f7fb;
+  --modal-backdrop: rgb(16 59 117 / 0.28);
+  --navigation-background: #ffffff;
+
+  --scene-sky-0: #cfe0f4;
+  --scene-sky-1: #e6eef8;
+  --scene-sky-2: #ffffff;
+  --scene-glow: #8fb6e6;
+  --scene-cloud: #ffffff;
+  --scene-cloud-deep: #e8eef5;
+  --scene-hill-far: #d3deec;
+  --scene-hill-near: #c3d2e4;
+  --scene-ground: #e8eef5;
+  --scene-embankment: #c9d5e4;
+  --scene-rail: #8fa0b6;
+  --scene-edge: #9fb3cf;
+  --scene-lane: #f36b08;
+}
+
+/* Restores the dark palette inside a subtree (the cinematic intro is always
+   dark). Must mirror @theme — checked by src/design/tokens.test.ts. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-charcoal: #0b0f14;
+  --color-midnight: #111827;
+  --color-navy: #1e293b;
+  --color-bronze: #8b6b46;
+  --color-gold: #d4a762;
+  --color-grey: #374151;
+  --color-white: #ffffff;
+  --color-gold-soft: #e2c08a;
+  --color-fog: #d5d9e0;
+  --color-mist: #a9b0bb;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-danger: #f0a090;
+  --color-success: #9fcf9a;
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -10px rgb(0 0 0 / 0.55);
+  --shadow-lift: 0 2px 6px rgb(0 0 0 / 0.35), 0 28px 56px -24px rgb(0 0 0 / 0.75);
+  --shadow-panel: 0 40px 80px -30px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(139 107 70 / 0.35);
+  --grain-opacity: 0.07;
+  --focus-ring: #d4a762;
+  --color-flame: #d4a762;
+  --input-border: rgb(169 176 187 / 0.55);
+}
+
+/* Light versions of the textured surfaces. */
+:root:not([data-theme="dark"]) {
+  .grain::after {
+    mix-blend-mode: multiply;
+  }
+  .surface-midnight {
+    background: var(--section-background);
+  }
+  .surface-charcoal,
+  footer {
+    background: var(--section-background);
+  }
+  .surface-atmos {
+    background: var(--section-atmosphere);
+  }
+  .surface-stone {
+    background: var(--section-background);
+  }
+  .vignette::before {
+    background: radial-gradient(
+      130% 100% at 50% 40%,
+      transparent 58%,
+      rgb(16 33 59 / 0.025)
+    );
+  }
+  .glass {
+    background: var(--elevated-background);
+    border-color: var(--surface-border);
+  }
+  .panel {
+    background: var(--card-background);
+    border-color: var(--surface-border);
+    box-shadow: var(--shadow-soft);
+  }
+  input,
+  textarea,
+  select {
+    background: var(--control-background);
+    &:hover {
+      background: var(--control-hover);
+    }
+  }
+  dialog.modal {
+    background: var(--elevated-background);
+  }
+  .sheen::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(23 86 169 / 0.35) 30%,
+      rgb(143 182 230 / 0.6) 50%,
+      rgb(23 86 169 / 0.35) 70%,
+      transparent
+    );
+  }
+  .plate-dusk,
+  .plate-dawn,
+  .plate-gold,
+  .plate-stone {
+    background:
+      radial-gradient(70% 60% at 76% 22%, rgb(143 182 230 / 0.35), transparent 65%),
+      linear-gradient(170deg, #e6eef8 0%, #f4f7fb 60%, #ffffff 100%);
+  }
+  dialog.modal[open]::backdrop {
+    background: var(--modal-backdrop);
+  }
+  /* The header is solid white: the logo's white field sits on it seamlessly. */
+  .site-header {
+    background: var(--navigation-background);
+    box-shadow: 0 1px 0 #d6dfe9;
+  }
+}
+
+/* Gentle content reveals (src/components/ui/Reveal.tsx). Content is only
+   hidden once JS is known to run, and a timed fallback always shows it. */
+@keyframes reveal-fallback {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+html[data-js] [data-reveal]:not([data-revealed]) {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: reveal-fallback 0s 3s forwards;
+}
+[data-reveal] {
+  transition:
+    opacity 700ms var(--ease-cinematic),
+    transform 700ms var(--ease-cinematic);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Lock page scroll behind any open modal dialog (menu, service modal). */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* Service modal enter/exit (native <dialog> in the top layer). */
+dialog.modal {
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+  transition:
+    opacity 260ms var(--ease-cinematic),
+    transform 360ms var(--ease-cinematic),
+    overlay 360ms allow-discrete,
+    display 360ms allow-discrete;
+}
+dialog.modal[open] {
+  opacity: 1;
+  transform: none;
+}
+@starting-style {
+  dialog.modal[open] {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+}
+dialog.service-details-modal {
+  border: 1px solid rgb(214 174 91 / 0.42);
+  background: linear-gradient(145deg, rgb(17 34 56 / 0.97), rgb(5 18 35 / 0.98)), #071629;
+  color: #eef4fa;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 32px 90px -30px rgb(0 0 0 / 0.88);
+}
+dialog.service-clear-dialog {
+  border: 1px solid rgb(214 174 91 / 0.42);
+  background: linear-gradient(145deg, rgb(17 34 56 / 0.98), rgb(5 18 35 / 0.99)), #071629;
+  color: #eef4fa;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 28px 72px -28px rgb(0 0 0 / 0.9);
+}
+dialog.service-clear-dialog::backdrop {
+  background: rgb(2 8 16 / 0.66);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+dialog.service-details-modal[open]::backdrop {
+  background: rgb(2 8 16 / 0.76);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.modal,
+  dialog.modal::backdrop {
+    transition: none;
+  }
+}
+dialog.modal::backdrop {
+  background: rgb(5 8 12 / 0);
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  transition:
+    background 300ms var(--ease-gentle),
+    backdrop-filter 300ms var(--ease-gentle),
+    overlay 300ms allow-discrete,
+    display 300ms allow-discrete;
+}
+dialog.modal[open]::backdrop {
+  background: rgb(5 8 12 / 0.66);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+@starting-style {
+  dialog.modal[open]::backdrop {
+    background: rgb(5 8 12 / 0);
+    backdrop-filter: blur(0);
+  }
+}
+
+/* Telugu overrides. Unlayered on purpose so they win over Tailwind
+   utilities (text-display's tight leading, the italic kicker). */
+:lang(te) .font-display {
+  letter-spacing: 0;
+  /* Telugu has no true italic; avoid synthetic slant. */
+  font-style: normal;
+}
+:lang(te) .text-display,
+:lang(te) .text-headline {
+  line-height: 1.3;
+}
+:lang(te) .text-title,
+:lang(te) .text-card {
+  line-height: 1.45;
+}
+:lang(te) .text-lead,
+:lang(te) .text-body {
+  line-height: 1.8;
+}
+/* Wide uppercase tracking breaks Telugu clusters apart. */
+:lang(te) .text-eyebrow {
+  letter-spacing: 0.04em;
+}
+
+/* ---------------- Intro gating (see src/features/intro) ----------------
+   data-intro is "pending" → "playing" while the intro runs and is removed
+   when it ends. An inline script sets "pending" before first paint
+   when the intro should play, so the overlay is visible from frame one
+   without a homepage flash or a hydration mismatch. */
+.intro-root {
+  display: none;
+}
+html[data-intro] .intro-root {
+  display: block;
+}
+html[data-intro] body {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-js] [data-reveal]:not([data-revealed]) {
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Reference homepage: shared geometry, independent daylight / midnight surfaces. */
+:root {
+  --reference-ink: #07132c;
+  --reference-accent: #ff6b00;
+  --reference-action: #b94700;
+  --reference-floor: #f4f7fd;
+}
+[data-theme="dark"] {
+  --reference-ink: #fff;
+  --reference-accent: #ffc444;
+  --reference-action: #ffc444;
+  --reference-floor: #04111e;
+}
+.site-header {
+  background: #fff;
+  box-shadow: 0 1px 0 #dce5ef;
+}
+[data-theme="dark"] .site-header {
+  background: #050f1c;
+  box-shadow: 0 1px 0 #b98b3440;
+}
+
+.site-header > div {
+  max-width: 1500px;
+  height: 64px;
+}
+.site-header [data-logo] {
+  width: 132px;
+}
+.site-header > div > nav a {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: var(--reference-ink);
+}
+.site-header > div > div > a {
+  background: var(--reference-action);
+  color: #fff;
+}
+[data-theme="dark"] .site-header > div > div > a {
+  color: #080f18;
+}
+.site-header > div > div > a span {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  white-space: nowrap;
+}
+.reference-hero {
+  position: relative;
+  padding-top: 64px;
+  overflow: hidden;
+  color: var(--reference-ink);
+  background:
+    radial-gradient(ellipse at 55% 78%, #fff3dc 0%, transparent 48%),
+    linear-gradient(150deg, #edf3fc, #a6cdf8 58%, #e6f1ff);
+}
+[data-theme="dark"] .reference-hero {
+  background:
+    radial-gradient(ellipse at 58% 75%, #55412b 0%, transparent 46%),
+    linear-gradient(135deg, #051221, #0b223c 58%, #061221);
+}
+.reference-stage {
+  position: relative;
+  min-height: clamp(260px, 15vw, 310px);
+  isolation: isolate;
+}
+.reference-copy {
+  position: relative;
+  z-index: 2;
+  width: 25%;
+  margin-left: 12%;
+  padding-top: 22px;
+  padding-bottom: 25px;
+}
+.reference-slides {
+  display: grid;
+}
+.reference-slide {
+  grid-area: 1/1;
+}
+.reference-slide[aria-hidden="true"] {
+  display: none;
+}
+.reference-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--reference-action);
+  font-size: clamp(12px, 0.95vw, 17px);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+}
+.reference-eyebrow::before,
+.reference-eyebrow::after {
+  content: "";
+  height: 1px;
+  width: 24px;
+  background: var(--reference-accent);
+  flex-shrink: 0;
+}
+.reference-copy h1 {
+  font-family: Georgia, var(--font-noto-serif-telugu), serif;
+  font-weight: 700;
+  font-size: clamp(34px, 3vw, 58px);
+  line-height: 0.91;
+  letter-spacing: -0.035em;
+  margin: 7px 0 14px;
+}
+.reference-description {
+  font-size: clamp(13px, 0.95vw, 17px);
+  line-height: 1.25;
+  max-width: 390px;
+}
+.reference-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+.reference-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 40px;
+  border-radius: 999px;
+  padding: 8px 23px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.reference-primary {
+  background: var(--reference-action);
+  color: #fff;
+  box-shadow: 0 3px 7px #b4541930;
+}
+[data-theme="dark"] .reference-primary {
+  color: #06111c;
+  background: linear-gradient(#ffd067, #ffbd39);
+}
+.reference-secondary {
+  border: 1px solid #657184;
+  background: #ffffff30;
+}
+[data-theme="dark"] .reference-secondary {
+  border-color: #d7c2a1;
+  background: #06101d60;
+}
+.reference-art {
+  position: absolute;
+  z-index: -1;
+  left: 37%;
+  top: 0;
+  width: 40.7%;
+  aspect-ratio: 680/240;
+  background-image: url("/art/travel-reference.png");
+  background-size: 245.882353% 392.083333%;
+  background-position: 62.5% 8.559201%;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 96%, transparent);
+}
+[data-theme="dark"] .reference-art {
+  background-position: 62.5% 76.890157%;
+}
+.reference-panels {
+  position: absolute;
+  top: 22px;
+  right: 8%;
+  width: 14%;
+  display: grid;
+  gap: 7px;
+}
+.reference-panels button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  min-height: 55px;
+  padding: 6px 16px;
+  border: 1px solid #ffffff80;
+  border-radius: 11px;
+  background: #f7faffb8;
+  color: var(--reference-ink);
+  box-shadow: 0 5px 10px #152a4920;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+.reference-panels button[aria-current="true"] {
+  border-color: var(--reference-accent);
+  background: #ffffffdb;
+}
+.reference-panels svg {
+  width: 44px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.reference-number {
+  display: block;
+  font-size: 13px;
+}
+[data-theme="dark"] .reference-panels button {
+  background: #111d2bba;
+  border-color: #ffffff30;
+}
+[data-theme="dark"] .reference-panels button[aria-current="true"] {
+  border-color: #ffc444;
+  box-shadow: inset 0 0 7px #ffc44430;
+}
+.reference-wave {
+  position: absolute;
+  z-index: -1;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  opacity: 0.75;
+}
+[data-theme="dark"] .reference-wave {
+  stroke: #ffc444;
+  filter: drop-shadow(0 0 5px #ffb432);
+}
+.reference-dots {
+  display: none;
+}
+.reference-services {
+  position: relative;
+  background: linear-gradient(#eaf2fd, var(--reference-floor));
+  color: var(--reference-ink);
+  padding: 0 0 20px;
+}
+[data-theme="dark"] .reference-services {
+  background: linear-gradient(#071523, var(--reference-floor));
+}
+.reference-services > div {
+  max-width: none;
+  width: 77%;
+  padding: 0;
+}
+.reference-services header > p {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--reference-action);
+  line-height: 1.2;
+}
+.reference-services h2 {
+  font-family: Georgia, var(--font-noto-serif-telugu), serif;
+  font-size: 29px;
+  line-height: 1.1;
+  margin: 3px 0 7px;
+  color: var(--reference-ink);
+}
+.reference-service-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.reference-service-grid > li {
+  grid-column: auto;
+}
+.reference-service-card {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 5px 12px;
+  align-items: start;
+  padding: 12px 16px 3px;
+  text-align: left;
+  border-radius: 15px;
+  background: #ffffffb8;
+  border: 1px solid #e2e9f3;
+  box-shadow: 0 4px 9px #1d35551a;
+}
+.reference-service-card > div {
+  grid-column: 1;
+  grid-row: 1/4;
+  width: 46px;
+  height: 40px;
+}
+.reference-service-card svg[data-pictogram] {
+  width: 46px;
+  height: 40px;
+}
+.reference-service-card h3 {
+  grid-column: 2;
+  margin: 0;
+  color: var(--reference-ink);
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.reference-service-card p {
+  grid-column: 2;
+  margin: 2px 0 0;
+  color: var(--reference-ink);
+  font-size: 11px;
+  line-height: 1.25;
+}
+.reference-service-card a {
+  grid-column: 2;
+  padding: 0;
+  justify-content: flex-start;
+  min-height: 30px;
+  font-size: 12px;
+  color: var(--reference-action);
+}
+[data-theme="dark"] .reference-service-card {
+  background: linear-gradient(125deg, #152332, #07121d);
+  border-color: #a87d36;
+  box-shadow:
+    inset 0 0 12px #ffc44412,
+    0 4px 10px #0003;
+}
+.reference-hero [fill="#10213B"],
+.reference-service-card [fill="#10213B"] {
+  fill: #080e18;
+}
+[data-theme="dark"] .reference-hero [fill="#10213B"],
+[data-theme="dark"] .reference-service-card [fill="#10213B"] {
+  fill: #fff;
+}
+[data-theme="dark"] .reference-hero [fill="#FFFFFF"],
+[data-theme="dark"] .reference-service-card [fill="#FFFFFF"] {
+  fill: #0a1725;
+}
+[data-theme="dark"] .reference-hero [fill="#F36B08"],
+[data-theme="dark"] .reference-service-card [fill="#F36B08"] {
+  fill: #ffc444;
+}
+@media (min-width: 1024px) and (max-width: 1350px) {
+  .site-header > div {
+    gap: 8px;
+    padding-inline: 24px;
+  }
+  .site-header > div > nav a {
+    padding-inline: 9px;
+    font-size: 14px;
+  }
+  .site-header > div > div {
+    gap: 6px;
+  }
+  .site-header > div > div > a {
+    padding-inline: 12px;
+  }
+  .reference-copy {
+    margin-left: 6%;
+    width: 31%;
+  }
+  .reference-panels {
+    right: 4%;
+    width: 18%;
+  }
+  .reference-services > div {
+    width: 88%;
+  }
+  .reference-service-card {
+    padding-inline: 10px;
+    gap: 5px 7px;
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+  .reference-service-card > div,
+  .reference-service-card svg[data-pictogram] {
+    width: 34px;
+  }
+  .reference-copy h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1023px) {
+  .reference-stage {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .reference-copy {
+    margin: 0;
+    width: 100%;
+    padding: 28px 6% 12px;
+  }
+  .reference-copy h1 {
+    max-width: 440px;
+    font-size: 48px;
+    line-height: 1;
+  }
+  .reference-eyebrow {
+    font-size: 14px;
+  }
+  .reference-description {
+    font-size: 16px;
+  }
+  .reference-art {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    order: 2;
+  }
+  .reference-panels {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    margin: 12px 6% 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    order: 3;
+    z-index: 1;
+  }
+  .reference-panels button {
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+  }
+  .reference-services > div {
+    width: 88%;
+  }
+  .reference-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .reference-service-grid > li:last-child {
+    grid-column: 1/-1;
+  }
+  .reference-service-card {
+    min-height: 132px;
+  }
+  .reference-service-card p {
+    font-size: 14px;
+  }
+  .reference-service-card a {
+    min-height: 44px;
+    font-size: 14px;
+  }
+  .reference-services {
+    padding-bottom: 32px;
+  }
+  .reference-services h2 {
+    margin-bottom: 20px;
+  }
+  .reference-wave {
+    height: 55px;
+  }
+}
+
+/* Reusable, restrained glass surfaces for interactive service UI. */
+.liquid-glass,
+.liquid-glass-item {
+  border: 1px solid rgb(214 223 233 / 0.86);
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 0.82), rgb(235 245 255 / 0.68)),
+    rgb(255 255 255 / 0.64);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  backdrop-filter: blur(14px) saturate(125%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.82),
+    0 18px 44px -28px rgb(16 59 117 / 0.32);
+}
+.liquid-glass-item {
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 0.76), rgb(239 247 255 / 0.62)),
+    rgb(255 255 255 / 0.58);
+  -webkit-backdrop-filter: blur(10px) saturate(118%);
+  backdrop-filter: blur(10px) saturate(118%);
+  transition:
+    border-color 220ms var(--ease-gentle),
+    box-shadow 220ms var(--ease-gentle),
+    transform 220ms var(--ease-gentle);
+}
+.liquid-glass-item:hover,
+.liquid-glass-item[open] {
+  border-color: color-mix(in srgb, var(--color-gold) 42%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    0 22px 48px -28px rgb(16 59 117 / 0.38);
+}
+[data-theme="dark"] .liquid-glass,
+[data-theme="dark"] .liquid-glass-item {
+  border-color: rgb(177 133 54 / 0.42);
+  background:
+    linear-gradient(145deg, rgb(24 42 66 / 0.78), rgb(7 20 38 / 0.72)), rgb(8 22 40 / 0.7);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.07),
+    0 24px 54px -28px rgb(0 0 0 / 0.86);
+}
+[data-theme="dark"] .liquid-glass-item:hover,
+[data-theme="dark"] .liquid-glass-item[open] {
+  border-color: rgb(245 184 39 / 0.64);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.1),
+    0 26px 58px -28px rgb(0 0 0 / 0.92);
+}
+dialog.modal.liquid-glass input,
+dialog.modal.liquid-glass textarea,
+dialog.modal.liquid-glass select {
+  background-color: color-mix(in srgb, var(--color-charcoal) 82%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .liquid-glass,
+  .liquid-glass-item {
+    background: var(--elevated-background);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-glass-item {
+    transition: none;
+  }
+}
+
+/* Services page: one compact travel-card layout shared by both themes. */
+.travel-ticket-section {
+  --travel-section-bg:
+    radial-gradient(85% 95% at 8% 18%, rgb(222 238 255 / 0.92), transparent 68%),
+    radial-gradient(80% 70% at 92% 4%, rgb(255 255 255 / 0.98), transparent 70%),
+    linear-gradient(180deg, #f8fbff 0%, #edf6ff 58%, #ffffff 100%);
+  --travel-wave: rgb(73 173 246 / 0.82);
+  --travel-card-bg: linear-gradient(
+    145deg,
+    rgb(255 255 255 / 0.98),
+    rgb(251 253 255 / 0.94)
+  );
+  --travel-card-border: rgb(214 223 233 / 0.82);
+  --travel-card-shadow: 0 12px 30px -16px rgb(20 38 61 / 0.26);
+  --travel-card-title: #14263d;
+  --travel-card-body: #42556b;
+  --travel-card-icon: #101827;
+  --travel-card-accent: #d85706;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--travel-section-bg);
+  padding-block: clamp(3rem, 4vw, 4rem);
+}
+.travel-ticket-section.grain::after {
+  opacity: 0.012;
+}
+.travel-ticket-section::before,
+.travel-ticket-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border: 2px solid var(--travel-wave);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.travel-ticket-section::before {
+  width: 118%;
+  height: 17rem;
+  right: -42%;
+  top: -13rem;
+}
+.travel-ticket-section::after {
+  width: 118%;
+  height: 18rem;
+  left: -42%;
+  bottom: -15rem;
+}
+.travel-ticket-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+  color: var(--travel-card-title);
+}
+.travel-ticket-heading::after {
+  content: "";
+  display: block;
+  width: 7.5rem;
+  height: 2px;
+  margin-top: 0.75rem;
+  background: linear-gradient(90deg, var(--travel-card-accent) 0 72%, transparent 72%);
+}
+.travel-ticket-grid {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+.travel-ticket-grid > li {
+  height: 100%;
+}
+.travel-ticket-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  min-height: 16rem;
+  height: 100%;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  color: var(--travel-card-body);
+  background: var(--travel-card-bg);
+  border: 1px solid var(--travel-card-border);
+  border-radius: 1.15rem;
+  box-shadow: var(--travel-card-shadow);
+  transition:
+    transform 260ms var(--ease-cinematic),
+    box-shadow 260ms var(--ease-cinematic),
+    border-color 260ms var(--ease-cinematic);
+}
+.travel-ticket-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(
+    in srgb,
+    var(--travel-card-accent) 45%,
+    var(--travel-card-border)
+  );
+  box-shadow: 0 18px 34px -18px rgb(20 38 61 / 0.36);
+}
+.travel-ticket-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--travel-card-icon);
+}
+.travel-ticket-icon svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.travel-ticket-icon svg [fill="#10213B"] {
+  fill: var(--travel-card-icon);
+}
+.travel-ticket-icon svg [fill="#F36B08"] {
+  fill: var(--travel-card-accent);
+}
+.travel-ticket-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+.travel-ticket-copy h3 {
+  color: var(--travel-card-title);
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.25rem);
+  font-weight: 750;
+  line-height: 1.35;
+}
+.travel-ticket-copy p {
+  margin-top: 1rem;
+  color: var(--travel-card-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.travel-ticket-badge {
+  order: -1;
+  display: inline-flex;
+  align-self: stretch;
+  min-height: 2rem;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  padding-inline: 1rem;
+  color: var(--travel-card-accent);
+  border: 1px solid color-mix(in srgb, var(--travel-card-accent) 45%, transparent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.travel-ticket-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.65rem;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  color: var(--travel-card-accent);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+.travel-ticket-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.travel-ticket-link svg {
+  transition: transform 260ms var(--ease-cinematic);
+}
+.travel-ticket-card:hover .travel-ticket-link svg {
+  transform: translateX(0.25rem);
+}
+[data-theme="dark"] .travel-ticket-section {
+  --travel-section-bg:
+    radial-gradient(75% 85% at 12% 0%, rgb(16 38 66 / 0.7), transparent 70%),
+    linear-gradient(150deg, #071426 0%, #0a182a 55%, #071426 100%);
+  --travel-wave: rgb(177 133 54 / 0.68);
+  --travel-card-bg: linear-gradient(145deg, #101d31, #0b182a);
+  --travel-card-border: rgb(177 133 54 / 0.54);
+  --travel-card-shadow: 0 16px 32px -20px rgb(0 0 0 / 0.88);
+  --travel-card-title: #ffffff;
+  --travel-card-body: #d5d9e0;
+  --travel-card-icon: #d4a762;
+  --travel-card-accent: #f5b827;
+}
+[data-theme="dark"] .travel-ticket-card:hover {
+  box-shadow: 0 18px 34px -18px rgb(0 0 0 / 0.92);
+}
+@media (min-width: 640px) {
+  .travel-ticket-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .travel-ticket-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .travel-ticket-card {
+    min-height: 15.75rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .travel-ticket-card,
+  .travel-ticket-link svg {
+    transition: none;
+  }
+  .travel-ticket-card:hover,
+  .travel-ticket-card:hover .travel-ticket-link svg {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .site-header > div {
+    padding-inline: 16px;
+    gap: 4px;
+  }
+  .site-header [data-logo] {
+    width: 120px;
+  }
+  .reference-copy {
+    padding-inline: 20px;
+    padding-top: 25px;
+  }
+  .reference-copy h1 {
+    font-size: 42px;
+  }
+  .reference-actions {
+    gap: 10px;
+  }
+  .reference-actions a {
+    padding: 10px 16px;
+    min-height: 44px;
+    font-size: 13px;
+  }
+  .reference-panels {
+    display: none;
+  }
+  .reference-dots {
+    display: flex;
+    justify-content: center;
+    order: 3;
+    position: relative;
+    z-index: 1;
+  }
+  .reference-dots button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+  }
+  .reference-dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--reference-ink);
+    border-radius: 50%;
+  }
+  .reference-dots [aria-current] span {
+    background: var(--reference-action);
+    width: 22px;
+    border-radius: 6px;
+  }
+  .reference-services > div {
+    width: auto;
+    margin-inline: 20px;
+  }
+  .reference-services h2 {
+    font-size: 25px;
+  }
+  .reference-services header > p {
+    font-size: 12px;
+  }
+  .reference-service-grid {
+    grid-template-columns: 1fr;
+  }
+  .reference-service-card {
+    grid-template-columns: 50px minmax(0, 1fr);
+    padding: 16px 18px 4px;
+  }
+  .reference-service-card h3 {
+    font-size: 17px;
+  }
+}
+
+/* Preserve the approved logo's internal whitespace without cropping the artwork. */
+.site-header [data-logo] {
+  width: 220px;
+}
+.reference-stage {
+  color: var(--reference-ink);
+}
+.reference-copy h1,
+.reference-description,
+.reference-secondary,
+.reference-number {
+  color: var(--reference-ink);
+}
+[data-theme="dark"] .reference-art {
+  aspect-ratio: 680/220;
+  background-size: 245.882353% 427.727273%;
+  background-position: 62.5% 74.895978%;
+}
+.site-header > div > div nav {
+  color: var(--reference-ink);
+}
+@media (max-width: 1023px) {
+  .site-header [data-logo] {
+    width: 170px;
+  }
+}
+@media (max-width: 600px) {
+  .site-header [data-logo] {
+    width: 150px;
+  }
+}
+.site-header [data-logo] {
+  width: 170px;
+  height: 60px;
+  aspect-ratio: auto;
+}
+.site-header > div {
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .reference-stage {
+    min-height: 236px;
+  }
+  .reference-copy {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .reference-copy h1 {
+    font-size: clamp(38px, 2.87vw, 55px);
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+  .reference-description {
+    font-size: 15px;
+  }
+  .reference-actions {
+    margin-top: 14px;
+  }
+  .reference-art {
+    top: -4px;
+  }
+}
+@media (min-width: 1351px) {
+  .reference-services > div {
+    width: 77%;
+    margin-left: 12.3%;
+  }
+  .reference-service-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+    padding-left: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .site-header [data-logo] {
+    width: 150px;
+    height: 56px;
+  }
+}
+/* Bright reference orange with navy labels keeps small CTA text accessible. */
+:root:not([data-theme="dark"]) .reference-primary,
+:root:not([data-theme="dark"]) .site-header > div > div > a,
+:root:not([data-theme="dark"]) .site-header > div > div nav [aria-current="true"] {
+  background: linear-gradient(#ff8c20, #ff6b00);
+  color: #07132c;
+}
+.reference-wave {
+  mask-image: linear-gradient(to right, #000, transparent 39%, transparent 76%, #000);
+}
+.reference-services {
+  padding-bottom: 18px;
+}
+@media (min-width: 1024px) {
+  .reference-copy {
+    padding-bottom: 2px;
+  }
+  .reference-service-card {
+    column-gap: 9px;
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+  }
+  .reference-service-card a {
+    min-height: 28px;
+  }
+}
+.reference-panels [data-pictogram="bus"] [fill="#F36B08"],
+.reference-service-card [data-pictogram="bus"] [fill="#F36B08"] {
+  fill: var(--reference-ink);
+}
+.reference-panels [data-pictogram="plane"] path[stroke],
+.reference-service-card [data-pictogram="plane"] path[stroke],
+.reference-panels [data-pictogram="train"] path[stroke],
+.reference-service-card [data-pictogram="train"] path[stroke] {
+  stroke: var(--reference-ink);
+}
+/* Reference sky at the outer edge: only the text-free strip is exposed. */
+@media (min-width: 1024px) {
+  .reference-hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 12%;
+    height: calc(100% - 64px);
+    background-image: url("/art/travel-reference.png");
+    background-size: 833.333333% auto;
+    background-position: 0 -3.588517vw;
+    mask-image: linear-gradient(to right, #000 65%, transparent);
+  }
+  [data-theme="dark"] .reference-hero::before {
+    background-position: 0 -32.77512vw;
+  }
+}
+[data-theme="dark"] .reference-panels button[aria-current="true"] [fill="#10213B"] {
+  fill: #ffc444;
+}
+.reference-service-card [data-pictogram="bus"] rect[fill="#10213B"] {
+  fill: var(--reference-floor);
+}
+
+/* Targeted sizing pass: retain the existing composition, type and palette. */
+.reference-service-card {
+  row-gap: 9px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+.reference-service-card p {
+  margin-top: 4px;
+}
+.reference-service-card a {
+  align-self: end;
+}
+@media (min-width: 1024px) {
+  .reference-stage {
+    min-height: clamp(290px, calc(3.333vw + 242px), 306px);
+  }
+  .reference-copy {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .reference-copy h1 {
+    margin-bottom: 20px;
+  }
+  .reference-actions {
+    margin-top: 24px;
+  }
+  .reference-art {
+    left: 35.8%;
+    top: 50%;
+    width: 43%;
+    transform: translateY(-50%);
+  }
+  .reference-panels {
+    top: 32px;
+  }
+  .reference-service-card {
+    min-height: 140px;
+  }
+  .reference-service-card h3 {
+    min-height: 2.4em;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1350px) {
+  .reference-stage {
+    min-height: 324px;
+  }
+  .reference-copy {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .reference-copy {
+    padding-top: 38px;
+    padding-bottom: 28px;
+  }
+  .reference-copy h1 {
+    margin-bottom: 24px;
+  }
+  .reference-actions {
+    margin-top: 26px;
+  }
+  .reference-art {
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+  .reference-service-card {
+    min-height: 152px;
+  }
+}

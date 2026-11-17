@@ -1,0 +1,801 @@
+{
+  "results": [
+    {
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "cards": 5,
+      "hero": 666.734375,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 72,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "cards": 5,
+      "hero": 570.140625,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 72,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "cards": 5,
+      "hero": 589.546875,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 72,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "cards": 5,
+      "hero": 773.859375,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 138,
+        "naturalHeight": 77,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "overflow": false,
+      "cards": 5,
+      "hero": 389.046875,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 341.5,
+          "right": 397.5
+        },
+        {
+          "text": "Services",
+          "x": 401.5,
+          "right": 473.5
+        },
+        {
+          "text": "About",
+          "x": 477.5,
+          "right": 533.5
+        },
+        {
+          "text": "Location",
+          "x": 537.5,
+          "right": 609.5
+        },
+        {
+          "text": "Contact",
+          "x": 613.5,
+          "right": 682.5
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 160,
+        "naturalHeight": 90,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1280,
+      "overflow": false,
+      "cards": 5,
+      "hero": 388,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 453.5,
+          "right": 509.5
+        },
+        {
+          "text": "Services",
+          "x": 521.5,
+          "right": 593.5
+        },
+        {
+          "text": "About",
+          "x": 605.5,
+          "right": 661.5
+        },
+        {
+          "text": "Location",
+          "x": 673.5,
+          "right": 745.5
+        },
+        {
+          "text": "Contact",
+          "x": 757.5,
+          "right": 826.5
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 110,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "cards": 5,
+      "hero": 354,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 511.5,
+          "right": 575.5
+        },
+        {
+          "text": "Services",
+          "x": 587.5,
+          "right": 668.5
+        },
+        {
+          "text": "About",
+          "x": 680.5,
+          "right": 745.5
+        },
+        {
+          "text": "Location",
+          "x": 757.5,
+          "right": 838.5
+        },
+        {
+          "text": "Contact",
+          "x": 850.5,
+          "right": 928.5
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 110,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1672,
+      "overflow": false,
+      "cards": 5,
+      "hero": 361.71875,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 627.5,
+          "right": 691.5
+        },
+        {
+          "text": "Services",
+          "x": 703.5,
+          "right": 784.5
+        },
+        {
+          "text": "About",
+          "x": 796.5,
+          "right": 861.5
+        },
+        {
+          "text": "Location",
+          "x": 873.5,
+          "right": 954.5
+        },
+        {
+          "text": "Contact",
+          "x": 966.5,
+          "right": 1044.5
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 110,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1920,
+      "overflow": false,
+      "cards": 5,
+      "hero": 369.984375,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 751.5,
+          "right": 815.5
+        },
+        {
+          "text": "Services",
+          "x": 827.5,
+          "right": 908.5
+        },
+        {
+          "text": "About",
+          "x": 920.5,
+          "right": 985.5
+        },
+        {
+          "text": "Location",
+          "x": 997.5,
+          "right": 1078.5
+        },
+        {
+          "text": "Contact",
+          "x": 1090.5,
+          "right": 1168.5
+        }
+      ],
+      "headlineColor": "rgb(7, 19, 44)",
+      "logo": {
+        "variant": "light",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 110,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "cards": 5,
+      "hero": 657.3125,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 48,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "cards": 5,
+      "hero": 559.109375,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 48,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "cards": 5,
+      "hero": 576.90625,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 150,
+        "height": 56,
+        "naturalWidth": 128,
+        "naturalHeight": 48,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "cards": 5,
+      "hero": 751.28125,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Services",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "About",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Location",
+          "x": 0,
+          "right": 0
+        },
+        {
+          "text": "Contact",
+          "x": 0,
+          "right": 0
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 138,
+        "naturalHeight": 51,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "overflow": false,
+      "cards": 5,
+      "hero": 389.046875,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 342,
+          "right": 397
+        },
+        {
+          "text": "Services",
+          "x": 401,
+          "right": 473
+        },
+        {
+          "text": "About",
+          "x": 477,
+          "right": 533
+        },
+        {
+          "text": "Location",
+          "x": 537,
+          "right": 609
+        },
+        {
+          "text": "Contact",
+          "x": 613,
+          "right": 682
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 160,
+        "naturalHeight": 60,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false,
+      "cards": 5,
+      "hero": 388,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 454,
+          "right": 509
+        },
+        {
+          "text": "Services",
+          "x": 521,
+          "right": 593
+        },
+        {
+          "text": "About",
+          "x": 605,
+          "right": 661
+        },
+        {
+          "text": "Location",
+          "x": 673,
+          "right": 745
+        },
+        {
+          "text": "Contact",
+          "x": 757,
+          "right": 826
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 73,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "cards": 5,
+      "hero": 354,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 512.5,
+          "right": 575.5
+        },
+        {
+          "text": "Services",
+          "x": 587.5,
+          "right": 667.5
+        },
+        {
+          "text": "About",
+          "x": 679.5,
+          "right": 744.5
+        },
+        {
+          "text": "Location",
+          "x": 756.5,
+          "right": 837.5
+        },
+        {
+          "text": "Contact",
+          "x": 849.5,
+          "right": 927.5
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 73,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1672,
+      "overflow": false,
+      "cards": 5,
+      "hero": 361.71875,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 628.5,
+          "right": 691.5
+        },
+        {
+          "text": "Services",
+          "x": 703.5,
+          "right": 783.5
+        },
+        {
+          "text": "About",
+          "x": 795.5,
+          "right": 860.5
+        },
+        {
+          "text": "Location",
+          "x": 872.5,
+          "right": 953.5
+        },
+        {
+          "text": "Contact",
+          "x": 965.5,
+          "right": 1043.5
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 73,
+        "treatment": "rgba-extraction"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1920,
+      "overflow": false,
+      "cards": 5,
+      "hero": 369.984375,
+      "nav": [
+        {
+          "text": "Home",
+          "x": 752.5,
+          "right": 815.5
+        },
+        {
+          "text": "Services",
+          "x": 827.5,
+          "right": 907.5
+        },
+        {
+          "text": "About",
+          "x": 919.5,
+          "right": 984.5
+        },
+        {
+          "text": "Location",
+          "x": 996.5,
+          "right": 1077.5
+        },
+        {
+          "text": "Contact",
+          "x": 1089.5,
+          "right": 1167.5
+        }
+      ],
+      "headlineColor": "rgb(255, 255, 255)",
+      "logo": {
+        "variant": "dark",
+        "objectFit": "contain",
+        "width": 170,
+        "height": 60,
+        "naturalWidth": 195,
+        "naturalHeight": 73,
+        "treatment": "rgba-extraction"
+      }
+    }
+  ],
+  "errors": [],
+  "persistence": true,
+  "logos": true,
+  "modal": true,
+  "telugu": true
+}

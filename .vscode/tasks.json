@@ -1,0 +1,147 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run project checks",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"check"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Format persistent draft changes",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"prettier",
+				"--write",
+				"src/features/service-enquiry/drafts.ts",
+				"src/features/service-enquiry/drafts.test.ts",
+				"src/features/service-enquiry/useServiceDraft.ts",
+				"src/features/service-enquiry/ServiceEnquiryForm.tsx",
+				"src/features/service-enquiry/ServiceFormFields.tsx",
+				"src/features/service-enquiry/schema.ts",
+				"src/features/service-enquiry/service-enquiry.test.tsx",
+				"src/features/enquiries/schema.ts",
+				"src/features/domain.test.ts",
+				"src/components/contact/EnquiryForm.tsx",
+				"src/components/components.test.tsx",
+				"src/components/phase2.test.tsx",
+				"src/app/[lang]/contact/page.tsx",
+				"src/i18n/dictionaries/en.ts",
+				"src/i18n/dictionaries/te.ts",
+				"src/app/globals.css"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test enquiry drafts",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"--maxWorkers=1",
+				"src/features/service-enquiry"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test contact enquiry drafts",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"--maxWorkers=1",
+				"src/components/components.test.tsx",
+				"src/features/service-enquiry/service-enquiry.test.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test optional contact fields",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"src/components/components.test.tsx",
+				"-t",
+				"accepts short required values"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test contact restore flow",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"src/components/components.test.tsx",
+				"-t",
+				"restores and explicitly clears"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test contact enquiry handoff",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"src/components/components.test.tsx",
+				"-t",
+				"hands a valid enquiry"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Format contact draft files",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"prettier",
+				"--write",
+				"src/features/enquiries/schema.ts",
+				"src/features/domain.test.ts",
+				"src/components/contact/EnquiryForm.tsx",
+				"src/components/components.test.tsx",
+				"src/components/phase2.test.tsx",
+				"src/app/[lang]/contact/page.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run serial full test suite",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"test",
+				"--",
+				"--maxWorkers=1"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

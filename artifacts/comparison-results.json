@@ -1,0 +1,18 @@
+[
+  {
+    "theme": "light",
+    "width": 1672,
+    "height": 485,
+    "meanAbsoluteChannelDifference": 28.338593202782025,
+    "normalizedMeanDifference": 0.11113173805012559,
+    "method": "Reference above actual in contact sheet; actual showcase height normalized to reference. Diff amplified 3x. This is not a pixel-perfect score."
+  },
+  {
+    "theme": "dark",
+    "width": 1672,
+    "height": 456,
+    "meanAbsoluteChannelDifference": 30.28949860446571,
+    "normalizedMeanDifference": 0.11878234746849298,
+    "method": "Reference above actual in contact sheet; actual showcase height normalized to reference. Diff amplified 3x. This is not a pixel-perfect score."
+  }
+]

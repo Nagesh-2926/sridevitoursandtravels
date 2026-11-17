@@ -1,0 +1,153 @@
+{
+  "results": [
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/services",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/about",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/location",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/contact",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/services",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/about",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/location",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/contact",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/services",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/about",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/location",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/contact",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/services",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/about",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/location",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/contact",
+      "widths": 7,
+      "accessibilityViolations": 0
+    },
+    {
+      "interaction": "WhatsApp handoff intercepted, validation and fallback passed",
+      "intro": {
+        "reason": "complete",
+        "elapsedMs": 5026.900000000023,
+        "mode": "full"
+      }
+    }
+  ],
+  "findings": []
+}

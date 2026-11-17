@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "widths": 6,
+      "accessibilityViolations": 0
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "widths": 6,
+      "accessibilityViolations": 0
+    },
+    {
+      "locale": "te",
+      "theme": "light",
+      "widths": 6,
+      "accessibilityViolations": 0
+    },
+    {
+      "locale": "te",
+      "theme": "dark",
+      "widths": 6,
+      "accessibilityViolations": 0
+    }
+  ],
+  "findings": []
+}

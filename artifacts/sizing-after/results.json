@@ -1,0 +1,761 @@
+{
+  "results": [
+    {
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 666.734375,
+        "right": 320,
+        "bottom": 666.734375
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 320,
+        "height": 602.734375,
+        "right": 320,
+        "bottom": 666.734375
+      },
+      "art": {
+        "x": 0,
+        "y": 497.796875,
+        "width": 320,
+        "height": 112.9375,
+        "right": 320,
+        "bottom": 610.734375
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 320,
+        "height": 423.796875,
+        "right": 320,
+        "bottom": 487.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 64,
+        "right": 320,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 150,
+        "height": 56,
+        "right": 166,
+        "bottom": 60
+      },
+      "services": {
+        "x": 0,
+        "y": 666.734375,
+        "width": 320,
+        "height": 1011.453125,
+        "right": 320,
+        "bottom": 1678.1875
+      },
+      "cards": [168.890625, 168.890625, 152, 168.890625, 186.390625],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 570.140625,
+        "right": 375,
+        "bottom": 570.140625
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 375,
+        "height": 506.140625,
+        "right": 375,
+        "bottom": 570.140625
+      },
+      "art": {
+        "x": 0,
+        "y": 381.796875,
+        "width": 375,
+        "height": 132.34375,
+        "right": 375,
+        "bottom": 514.140625
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 375,
+        "height": 307.796875,
+        "right": 375,
+        "bottom": 371.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 64,
+        "right": 375,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 150,
+        "height": 56,
+        "right": 166,
+        "bottom": 60
+      },
+      "services": {
+        "x": 0,
+        "y": 570.140625,
+        "width": 375,
+        "height": 915.78125,
+        "right": 375,
+        "bottom": 1485.921875
+      },
+      "cards": [152, 152, 152, 152, 168.890625],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 773.859375,
+        "right": 768,
+        "bottom": 773.859375
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 709.859375,
+        "right": 768,
+        "bottom": 773.859375
+      },
+      "art": {
+        "x": 0,
+        "y": 389.796875,
+        "width": 768,
+        "height": 271.046875,
+        "right": 768,
+        "bottom": 660.84375
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 315.796875,
+        "right": 768,
+        "bottom": 379.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 64,
+        "right": 768,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 32,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 202,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 773.859375,
+        "width": 768,
+        "height": 573.6875,
+        "right": 768,
+        "bottom": 1347.546875
+      },
+      "cards": [152, 152, 152, 152, 152],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 389.046875,
+        "right": 1024,
+        "bottom": 389.046875
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1024,
+        "height": 325.046875,
+        "right": 1024,
+        "bottom": 389.046875
+      },
+      "art": {
+        "x": 366.578125,
+        "y": 148.8203125,
+        "width": 440.3125,
+        "height": 155.390625,
+        "right": 806.890625,
+        "bottom": 304.2109375
+      },
+      "copy": {
+        "x": 61.4375,
+        "y": 64,
+        "width": 317.4375,
+        "height": 325.046875,
+        "right": 378.875,
+        "bottom": 389.046875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 64,
+        "right": 1024,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 24,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 194,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 389.046875,
+        "width": 1024,
+        "height": 267.03125,
+        "right": 1024,
+        "bottom": 656.078125
+      },
+      "cards": [190.34375, 190.34375, 190.34375, 190.34375, 190.34375],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 354,
+        "right": 1440,
+        "bottom": 354
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1440,
+        "height": 290,
+        "right": 1440,
+        "bottom": 354
+      },
+      "art": {
+        "x": 515.515625,
+        "y": 99.734375,
+        "width": 619.1875,
+        "height": 218.53125,
+        "right": 1134.703125,
+        "bottom": 318.265625
+      },
+      "copy": {
+        "x": 172.796875,
+        "y": 64,
+        "width": 360,
+        "height": 267.109375,
+        "right": 532.796875,
+        "bottom": 331.109375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 64,
+        "right": 1440,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 40,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 210,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 354,
+        "width": 1440,
+        "height": 253.28125,
+        "right": 1440,
+        "bottom": 607.28125
+      },
+      "cards": [176.59375, 176.59375, 176.59375, 176.59375, 176.59375],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "light",
+      "width": 1920,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 369.984375,
+        "right": 1920,
+        "bottom": 369.984375
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1920,
+        "height": 305.984375,
+        "right": 1920,
+        "bottom": 369.984375
+      },
+      "art": {
+        "x": 687.359375,
+        "y": 71.296875,
+        "width": 825.59375,
+        "height": 291.375,
+        "right": 1512.953125,
+        "bottom": 362.671875
+      },
+      "copy": {
+        "x": 230.390625,
+        "y": 64,
+        "width": 480,
+        "height": 295.984375,
+        "right": 710.390625,
+        "bottom": 359.984375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64,
+        "right": 1920,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 250,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 420,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 369.984375,
+        "width": 1920,
+        "height": 233.9375,
+        "right": 1920,
+        "bottom": 603.921875
+      },
+      "cards": [157.25, 157.25, 157.25, 157.25, 157.25],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 657.3125,
+        "right": 320,
+        "bottom": 657.3125
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 320,
+        "height": 593.3125,
+        "right": 320,
+        "bottom": 657.3125
+      },
+      "art": {
+        "x": 0,
+        "y": 497.796875,
+        "width": 320,
+        "height": 103.515625,
+        "right": 320,
+        "bottom": 601.3125
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 320,
+        "height": 423.796875,
+        "right": 320,
+        "bottom": 487.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 64,
+        "right": 320,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 150,
+        "height": 56,
+        "right": 166,
+        "bottom": 60
+      },
+      "services": {
+        "x": 0,
+        "y": 657.3125,
+        "width": 320,
+        "height": 1011.453125,
+        "right": 320,
+        "bottom": 1668.765625
+      },
+      "cards": [168.890625, 168.890625, 152, 168.890625, 186.390625],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 559.109375,
+        "right": 375,
+        "bottom": 559.109375
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 375,
+        "height": 495.109375,
+        "right": 375,
+        "bottom": 559.109375
+      },
+      "art": {
+        "x": 0,
+        "y": 381.796875,
+        "width": 375,
+        "height": 121.3125,
+        "right": 375,
+        "bottom": 503.109375
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 375,
+        "height": 307.796875,
+        "right": 375,
+        "bottom": 371.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 64,
+        "right": 375,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 150,
+        "height": 56,
+        "right": 166,
+        "bottom": 60
+      },
+      "services": {
+        "x": 0,
+        "y": 559.109375,
+        "width": 375,
+        "height": 915.78125,
+        "right": 375,
+        "bottom": 1474.890625
+      },
+      "cards": [152, 152, 152, 152, 168.890625],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 751.28125,
+        "right": 768,
+        "bottom": 751.28125
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 687.28125,
+        "right": 768,
+        "bottom": 751.28125
+      },
+      "art": {
+        "x": 0,
+        "y": 389.796875,
+        "width": 768,
+        "height": 248.46875,
+        "right": 768,
+        "bottom": 638.265625
+      },
+      "copy": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 315.796875,
+        "right": 768,
+        "bottom": 379.796875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 64,
+        "right": 768,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 32,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 202,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 751.28125,
+        "width": 768,
+        "height": 573.6875,
+        "right": 768,
+        "bottom": 1324.96875
+      },
+      "cards": [152, 152, 152, 152, 152],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 389.046875,
+        "right": 1024,
+        "bottom": 389.046875
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1024,
+        "height": 325.046875,
+        "right": 1024,
+        "bottom": 389.046875
+      },
+      "art": {
+        "x": 366.578125,
+        "y": 155.2890625,
+        "width": 440.3125,
+        "height": 142.453125,
+        "right": 806.890625,
+        "bottom": 297.7421875
+      },
+      "copy": {
+        "x": 61.4375,
+        "y": 64,
+        "width": 317.4375,
+        "height": 325.046875,
+        "right": 378.875,
+        "bottom": 389.046875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 64,
+        "right": 1024,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 24,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 194,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 389.046875,
+        "width": 1024,
+        "height": 267.03125,
+        "right": 1024,
+        "bottom": 656.078125
+      },
+      "cards": [190.34375, 190.34375, 190.34375, 190.34375, 190.34375],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 354,
+        "right": 1440,
+        "bottom": 354
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1440,
+        "height": 290,
+        "right": 1440,
+        "bottom": 354
+      },
+      "art": {
+        "x": 515.515625,
+        "y": 108.84375,
+        "width": 619.1875,
+        "height": 200.3125,
+        "right": 1134.703125,
+        "bottom": 309.15625
+      },
+      "copy": {
+        "x": 172.796875,
+        "y": 64,
+        "width": 360,
+        "height": 267.109375,
+        "right": 532.796875,
+        "bottom": 331.109375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 64,
+        "right": 1440,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 40,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 210,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 354,
+        "width": 1440,
+        "height": 253.28125,
+        "right": 1440,
+        "bottom": 607.28125
+      },
+      "cards": [176.59375, 176.59375, 176.59375, 176.59375, 176.59375],
+      "reducedMotionIntroHidden": true
+    },
+    {
+      "theme": "dark",
+      "width": 1920,
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 369.984375,
+        "right": 1920,
+        "bottom": 369.984375
+      },
+      "stage": {
+        "x": 0,
+        "y": 64,
+        "width": 1920,
+        "height": 305.984375,
+        "right": 1920,
+        "bottom": 369.984375
+      },
+      "art": {
+        "x": 687.359375,
+        "y": 83.4375,
+        "width": 825.59375,
+        "height": 267.09375,
+        "right": 1512.953125,
+        "bottom": 350.53125
+      },
+      "copy": {
+        "x": 230.390625,
+        "y": 64,
+        "width": 480,
+        "height": 295.984375,
+        "right": 710.390625,
+        "bottom": 359.984375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64,
+        "right": 1920,
+        "bottom": 64
+      },
+      "logo": {
+        "x": 250,
+        "y": 2,
+        "width": 170,
+        "height": 60,
+        "right": 420,
+        "bottom": 62
+      },
+      "services": {
+        "x": 0,
+        "y": 369.984375,
+        "width": 1920,
+        "height": 233.9375,
+        "right": 1920,
+        "bottom": 603.921875
+      },
+      "cards": [157.25, 157.25, 157.25, 157.25, 157.25],
+      "reducedMotionIntroHidden": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- PROVISIONAL brand mark — not the approved Sridevi Tours & Travels icon.
+       A neutral flight-arc symbol used only until the owner supplies an
+       approved square icon. Regenerate icons with `npm run icons`. -->
+  <rect width="64" height="64" rx="14" fill="#202832"/>
+  <path d="M13 47 Q 27 13 51 21" fill="none" stroke="#C5A987" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="51" cy="21" r="4.5" fill="#C5A987"/>
+  <circle cx="13" cy="47" r="2.5" fill="#967552"/>
+</svg>

@@ -1,0 +1,170 @@
+{
+  "results": [
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/services",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/about",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/location",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "te",
+      "route": "/contact",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/services",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/about",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/location",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "dark",
+      "locale": "en",
+      "route": "/contact",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/services",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/about",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/location",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "te",
+      "route": "/contact",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/services",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/about",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/location",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    },
+    {
+      "theme": "light",
+      "locale": "en",
+      "route": "/contact",
+      "calls": "9347626862",
+      "whatsapp": "9666270662",
+      "atmosphere": "passed"
+    }
+  ],
+  "defaultLightWithDarkOS": true,
+  "savedPreferencesAtDOMContentLoaded": true,
+  "initialTwelveFramesCorrect": true,
+  "languageSwitching": true,
+  "contactAndFlightFormHandoffs": true,
+  "modalFocusTrap": true
+}

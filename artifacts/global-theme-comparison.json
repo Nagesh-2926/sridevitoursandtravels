@@ -1,0 +1,122 @@
+[
+  {
+    "name": "dark-en-home-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-en-home-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-en-services-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-en-services-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-en-about-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-en-about-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-en-location-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-en-location-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-en-contact-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-en-contact-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 110735,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-te-home-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-te-home-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-te-services-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-te-services-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-te-about-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-te-about-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-te-location-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-te-location-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 21430,
+    "totalPixels": 720000
+  },
+  {
+    "name": "dark-te-contact-375.png",
+    "comparedRegion": "375x500",
+    "changedPixels": 0,
+    "totalPixels": 187500
+  },
+  {
+    "name": "dark-te-contact-1440.png",
+    "comparedRegion": "1440x500",
+    "changedPixels": 0,
+    "totalPixels": 720000
+  }
+]
